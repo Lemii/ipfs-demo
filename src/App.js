@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Divider, Row, Typography } from "antd";
+import UploadFile from "./components/UploadFile";
+import UploadText from "./components/UploadText";
+import Download from "./components/Download";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Row justify="center" style={{ paddingTop: "3em", paddingBottom: "3em" }}>
+      <Typography.Title level={1}>Lisk IPFS Plugin Demo</Typography.Title>
+
+      <Divider />
+
+      <UploadFile />
+
+      <Divider />
+
+      <UploadText />
+
+      <Divider />
+
+      <Download />
+
+      <Divider />
+
+      <Typography.Text type="secondary">Lisk IPFS Plugin Demo</Typography.Text>
+    </Row>
   );
 }
 

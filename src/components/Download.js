@@ -38,7 +38,7 @@ export default function UploadText() {
 
       <div>
         <Input
-          style={{ width: "500px", maxWidth: "100vw" }}
+          style={{ width: "600px", maxWidth: "100vw" }}
           value={cid}
           onChange={e => setCid(e.target.value)}
           placeholder="Enter CID..."
@@ -63,7 +63,7 @@ export default function UploadText() {
 
           <TextArea
             rows="3"
-            style={{ width: "500px", maxWidth: "100vw" }}
+            style={{ width: "600px", maxWidth: "100vw" }}
             value={response}
           />
         </>

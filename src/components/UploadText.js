@@ -53,7 +53,7 @@ export default function UploadText() {
           style={{ textAlign: "center" }}
         >
           <Form.Item name="text" rules={[{ required: true }]}>
-            <TextArea rows="3" style={{ width: "500px", maxWidth: "100vw" }} />
+            <TextArea rows="3" style={{ width: "600px", maxWidth: "100vw" }} />
           </Form.Item>
 
           <Form.Item>

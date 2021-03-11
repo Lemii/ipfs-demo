@@ -15,6 +15,16 @@ export const getWsClient = async () => {
   return wsClientCache;
 };
 
+export const subscribeToLogger = async handler => {
+  if (!wsClientCache) {
+    await getWsClient();
+  }
+
+  wsClientCache.subscribe("ipfs:log", e => {
+    handler(e);
+  });
+};
+
 export const uploadFile = async file => {
   const endpoint = `${process.env.REACT_APP_IPFS_API}/ipfs/upload/file`;
 
